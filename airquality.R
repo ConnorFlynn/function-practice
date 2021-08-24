@@ -14,8 +14,6 @@ colSums(is.na(air_quality_june))
 
 summary(air_quality_june)
 
-
-  
 air_quality_june_plot <- ggplot(data = air_quality_june, aes(x = Ozone, y = Solar.R)) +
   geom_point()
 
@@ -23,12 +21,12 @@ air_quality_june_plot <- ggplot(data = air_quality_june, aes(x = Ozone, y = Sola
 air_quality_june_plot
 
 
+temp_finder <- function(month_num, day_num){
+  day_temp <- filter(airquality, month_num == Month, day_num == Day)
+  return(day_temp$Temp)
+}
 
-
-airquality %>% 
-  windy <- function(Day, Month) {
-    return(Wind)
-  }
+temp_finder(5, 1)
 
 
 wind_function <- function(day, month){
